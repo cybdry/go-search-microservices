@@ -1,0 +1,15 @@
+defaults: &defaults
+  docker:
+    - images: circleci/golang:1.21
+  working_directory: /go/src/github.com/microservices-with-go/services-search
+  envirorments:
+    TEST_RESULTS: /tmp/test-results
+
+
+
+version: 2
+jobs:
+  build:
+    <<: *defaults
+    steps:
+      - chec
